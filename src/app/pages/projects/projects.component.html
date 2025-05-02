@@ -1,0 +1,21 @@
+<div class="projects-wrapper">
+  <div class="projects-left">
+    <h2>Projects</h2>
+    <ul>
+      <li *ngFor="let project of projects">
+        <h3>{{ project.title }}</h3>
+        <p class="description">{{ project.description }}</p>
+        <p class="experience"><strong>Experience:</strong> {{ project.experience }}</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="projects-right">
+    <h2>Certificates</h2>
+    <ul>
+      <li *ngFor="let cert of certificates">
+        <p>{{ cert.certificate }}</p>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+.projects-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                url('/assets/images/background3.png') center/cover no-repeat;
+    color: white;
+    min-height: 80vh;
+    flex-wrap: wrap;
+    opacity: 0; /* Start with hidden state */
+    animation: fadeInUp 1s forwards; /* Fade-in animation for the whole container */
+}
+
+.projects-left, .projects-right {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    border: 2px solid rgb(255, 255, 255);
+    opacity: 0; /* Start with hidden state */
+    transform: translateY(20px); /* Start from a lower position */
+    animation: fadeInUp 1s ease forwards; /* Fade-in and slide-up animation */
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 0, 0);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding-bottom: 0.5rem;
+    opacity: 0; /* Start with hidden state */
+    transform: translateY(20px); /* Start from a lower position */
+    animation: fadeInDown 1s ease forwards; /* Fade-in and slide-down animation for heading */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    opacity: 0; /* Start with hidden state */
+    transform: translateY(20px); /* Start from a lower position */
+    animation: fadeInUp 1s ease forwards; /* Fade-in and slide-up animation for list items */
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #dddddd;
+}
+
+.description {
+    margin: 0.3rem 0;
+    color: #bbbbbb;
+}
+
+.experience {
+    font-size: 0.95rem;
+    color: #cccccc;
+}
+
+.projects-right p {
+    font-size: 1rem;
+    color: #eeeeee;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-wrapper {
+        flex-direction: column;
+    }
+}

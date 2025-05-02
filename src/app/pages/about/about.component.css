@@ -1,0 +1,146 @@
+.about-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url('/assets/images/background3.png') center/cover no-repeat;
+  color: #ffffff;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 2rem 2rem 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 0;
+}
+
+.about-image {
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpImage 1.2s forwards 0.3s; /* Slightly slower animation for smoothness */
+}
+
+.image-wrapper {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 30px white;
+  transition: transform 0.3s;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-content {
+  flex: 1 1 300px;
+  max-width: 600px;
+}
+
+.about-content h1 {
+  color: #ff4d4d;
+  margin-bottom: 1rem;
+  font-size: 2.8rem; /* Slightly larger heading for more impact */
+  font-family: 'Roboto', sans-serif;
+}
+
+.about-content h1,
+.about-content p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpText 1.5s forwards; /* Slower fade-in for better visual effect */
+}
+
+.about-content p {
+  animation-delay: 0.5s; /* Delayed appearance */
+  line-height: 1.8; /* Increased line height for better readability */
+  font-size: 1.2rem; /* Slightly larger font size for better clarity */
+}
+
+.highlighted-name {
+  color: #ea5018;
+  font-weight: bold;
+  font-size: 1.2em; /* Enhanced font size */
+}
+
+/* Typing effect */
+.typing-heading {
+  font-weight: bold;
+  margin-left: 5px;
+  display: inline;
+  color: #ffcc00;
+  font-size: 1.4em; /* Slightly larger for visibility */
+}
+
+.typed-text {
+  display: inline;
+}
+
+
+/* Cursor blink animation */
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* Fade-in animations */
+@keyframes fadeInUpText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpImage {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .about-image,
+  .about-content {
+    width: 100%;
+  }
+
+  .image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-content {
+    margin-top: 0.5rem;
+  }
+
+  /* Adjust font sizes for mobile devices */
+  .about-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-content p {
+    font-size: 1.1rem;
+  }
+
+  .typed-text {
+    font-size: 1.2em; /* Ensure typed text is large enough for mobile */
+  }
+
+  .cursor {
+    height: 1.2em; /* Resize cursor for mobile */
+  }
+}

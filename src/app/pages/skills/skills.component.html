@@ -1,0 +1,11 @@
+<div class="skills-container">
+    <div *ngFor="let category of skills">
+      <h2 class="fade-in">{{ category.name }}</h2>
+      <ul>
+        <li *ngFor="let item of category.items" class="fade-in">
+          <span>{{ item }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

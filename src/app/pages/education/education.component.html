@@ -1,0 +1,15 @@
+<div class="timeline-container">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let edu of educationTimeline">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>{{ edu.title }} - <span class="year">{{ edu.year }}</span></h3>
+          <h4>{{ edu.institution }} <span style="font-weight: normal; color: #aaa;">({{ edu.location }})</span></h4>
+          <p><strong>Percentage :</strong> {{ edu.percentage }}</p>
+          <p>{{ edu.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

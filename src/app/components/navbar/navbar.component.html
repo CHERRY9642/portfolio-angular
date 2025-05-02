@@ -1,0 +1,17 @@
+<!-- src/app/components/navbar/navbar.component.html -->
+<nav class="navbar">
+  <div class="navbar-brand">
+    Charan Kumar
+  </div>
+
+  <!-- Hamburger menu icon (visible on mobile) -->
+  <button class="navbar-toggle" (click)="toggleMenu()">☰</button>
+
+  <ul class="navbar-links" [class.show]="menuOpen">
+    <li><a routerLink="/" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+    <li><a routerLink="/skills" routerLinkActive="active" (click)="closeMenu()">Skills</a></li>
+    <li><a routerLink="/education" routerLinkActive="active" (click)="closeMenu()">Education</a></li>
+    <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a></li>
+  </ul>
+</nav>
