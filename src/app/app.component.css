@@ -11,3 +11,7 @@
     overflow-x: hidden;
   }
   
+  :host {
+  display: block;
+  height: 100%;
+}
